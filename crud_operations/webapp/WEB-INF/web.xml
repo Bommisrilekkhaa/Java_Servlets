@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" version="5.0">
+  <servlet>
+    <description></description>
+    <display-name>serveletdemo</display-name>
+    <servlet-name>serveletdemo</servlet-name>
+    <servlet-class>demo.serveletdemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>serveletdemo</servlet-name>
+    <url-pattern>/serveletdemo</url-pattern>
+  </servlet-mapping>
+  <display-name>sample</display-name>
+  <servlet>
+  	<servlet-name>count.jsp</servlet-name>
+  	<jsp-file>/count.jsp/</jsp-file>
+  
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>count.jsp</servlet-name>
+  	<url-pattern>/count</url-pattern>
+  </servlet-mapping>
+  
+  <resource-ref>
+    <description>DB Connection</description>
+    <res-ref-name>jdbc/MyDB</res-ref-name>
+    
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+</resource-ref>
+  
+</web-app>
