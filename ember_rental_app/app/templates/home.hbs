@@ -1,0 +1,8 @@
+<h1>Home</h1>
+<ul>
+    {{#each model as |lists|}}
+    <li>{{lists}}</li>
+    {{/each}}
+</ul>
+{{nav-bar title="list" navbar=model}}
+{{outlet}}
